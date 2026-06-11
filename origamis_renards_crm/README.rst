@@ -1,8 +1,7 @@
 Origamis: RENARDS CRM
 ============================
 
-THE MODULE INTRODUCES VARIOUS ADDITIONS AND CUSTOMISATIONS TO THE CRM APP
-
+Tu ivča menila veci
 
 Changelog
 =========
