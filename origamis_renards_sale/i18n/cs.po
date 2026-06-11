@@ -1,0 +1,402 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* origamis_renards_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-19 10:39+0000\n"
+"PO-Revision-Date: 2024-11-19 10:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__form_of_legal_execution
+msgid "Form Of Legal Execution"
+msgstr "Způsob jednání"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__contract_number__contract_type__contract_addendum
+msgid "Contract Addendum"
+msgstr "Dodatek smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__contract_number__contract_type__framework_contract
+msgid "Framework contract"
+msgstr "Rámcová smlouva"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__contract_version
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__contract_number__contract_type__contract_version
+msgid "Contract Version"
+msgstr "Verze smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model,name:origamis_renards_sale.model_contract_number
+msgid "Contract Number"
+msgstr ""
+
+#. module: origamis_renards_sale
+#: model:ir.actions.act_window,name:origamis_renards_sale.action_contract_number
+#: model:ir.ui.menu,name:origamis_renards_sale.menu_contract_number
+msgid "Contracts"
+msgstr "Dodatky"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.view_order_form_inherit_origamis
+msgid "Contracts"
+msgstr "Dodatky"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__contract_type
+msgid "Contract Type"
+msgstr "Typ smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__contract_number_ids
+msgid "Contracts"
+msgstr "Smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__framework_contract_no
+msgid "Contract Amendment No"
+msgstr "Číslo dodatku smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__sale_order_id
+msgid "Sale Order"
+msgstr "Prodejní objednávka"
+
+#. module: sale
+#: model:ir.ui.menu,name:sale.menu_sale_order
+#: model:ir.ui.menu,name:sale.sale_order_menu
+msgid "Orders"
+msgstr "Smlouvy"
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_quotations
+#: model:ir.actions.act_window,name:sale.action_quotations_salesteams
+#: model:ir.actions.act_window,name:sale.action_quotations_with_onboarding
+#: model:ir.ui.menu,name:sale.menu_sale_quotations
+#: model_terms:ir.ui.view,arch_db:sale.crm_team_view_kanban_dashboard
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_home_menu_sale
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_quotations
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_quotation
+#: model_terms:ir.ui.view,arch_db:sale.utm_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:sale.utm_campaign_view_kanban
+#: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
+#: model_terms:ir.ui.view,arch_db:sale.view_quotation_tree
+msgid "Quotations"
+msgstr "Smlouvy"
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_orders_to_invoice
+#: model:ir.ui.menu,name:sale.menu_sale_order_invoice
+#: model_terms:ir.ui.view,arch_db:sale.crm_team_view_kanban_dashboard
+msgid "Orders to Invoice"
+msgstr "Smlouvy k fakturaci"
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_orders_upselling
+#: model:ir.ui.menu,name:sale.menu_sale_order_upselling
+msgid "Orders to Upsell"
+msgstr "Smlouvy na upsell"
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_orders
+#: model:ir.actions.act_window,name:sale.action_orders_salesteams
+#: model:ir.actions.act_window,name:sale.action_orders_to_invoice_salesteams
+#: model:ir.model.fields,field_description:sale.field_payment_transaction__contract_number_ids
+#: model:ir.ui.menu,name:sale.menu_sales_config
+#: model_terms:ir.ui.view,arch_db:sale.crm_team_view_kanban_dashboard
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_home_menu_sale
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_home_sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_tree
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_quotation
+#: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
+#: model_terms:ir.ui.view,arch_db:sale.view_order_tree
+#: model_terms:ir.ui.view,arch_db:sale.view_sale_order_calendar
+#: model_terms:ir.ui.view,arch_db:sale.view_sale_order_graph
+#: model_terms:ir.ui.view,arch_db:sale.view_sale_order_pivot
+msgid "Sales Orders"
+msgstr "Smlouvy"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_quotation
+#: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
+msgid "Sales Orders"
+msgstr "Podepsané smlouvy"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_cancel_view_form
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_template
+#: model_terms:ir.ui.view,arch_db:sale.view_order_form
+#: model_terms:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
+msgid "Cancel"
+msgstr "Zrušit smlouvu"
+
+#. module: sale
+#: model:ir.model.fields.selection,name:sale.selection__sale_order__state__sent
+#: model:ir.model.fields.selection,name:sale.selection__sale_report__state__sent
+msgid "Quotation Sent"
+msgstr "Smlouva odeslána"
+
+#. module: sale
+#: model:ir.model.fields.selection,name:sale.selection__sale_order__state__draft
+#: model:ir.model.fields.selection,name:sale.selection__sale_report__state__draft
+msgid "Quotation"
+msgstr "Návrh smlouvy"
+
+#. module: sale
+#. odoo-python
+#: code:addons/sale/models/sale_order.py:0
+#: model:ir.model,name:sale.model_sale_order
+#: model:ir.model.fields,field_description:sale.field_res_partner__contract_number_ids
+#: model:ir.model.fields,field_description:sale.field_res_users__contract_number_ids
+#: model:ir.model.fields.selection,name:sale.selection__sale_order__state__sale
+#: model:ir.model.fields.selection,name:sale.selection__sale_report__order_reference__sale_order
+#: model:ir.model.fields.selection,name:sale.selection__sale_report__state__sale
+#: model_terms:ir.ui.view,arch_db:sale.product_document_search
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_activity
+#: model_terms:ir.ui.view,arch_db:sale.view_order_form
+#, python-format
+msgid "Sales Order"
+msgstr "Podepsaná smlouva"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_quotation
+msgid "My Quotations"
+msgstr "Mé smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__individual_contact_ids
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.view_order_form_inherit_origamis
+msgid "Individual Contacts"
+msgstr "Jednající osoby"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__type_of_service_id
+msgid "Type Of Service"
+msgstr "Druh služby"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__date_of_signature
+msgid "Date Of Signature"
+msgstr "Datum podpisu smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__description
+msgid "Description"
+msgstr "Popis"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__name
+msgid "Name"
+msgstr "Název dodatku smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__upload_contract
+msgid "Upload Contract"
+msgstr "Nahrát dodatek smlouvy"
+
+#. module: origamis_renards_sale
+#. odoo-python
+#: code:addons/origamis_renards_sale/models/sale_order.py:0
+#, python-format
+msgid ""
+"An error occurred while confirming the contract proposal. To confirm the "
+"Contract Proposal, please fill in the Date of Signature field."
+msgstr "Nastala chyba při potvrzení návrhu smlouvy. Pro potvrzení návrhu smlouvy vyplńte pole Datum podpisu smlouvy."
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.view_order_form
+msgid "Type to find a customer..."
+msgstr "Zadejte název pro vyhledání zákazníka."
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__origin
+msgid "Source Document"
+msgstr "Název"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__tag_ids
+#: model:ir.ui.menu,name:sale.menu_tag_config
+msgid "Tags"
+msgstr "Dotační titul"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.view_order_form_inherit_origamis
+msgid "Client-side contract number"
+msgstr "Číslo smlouvy na straně klienta"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order__order_line
+#: model_terms:ir.ui.view,arch_db:sale.view_order_form
+msgid "Order Lines"
+msgstr "Finanční toky"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__customer_id
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__partner_id
+msgid "Customer"
+msgstr "Zákazník"
+
+#. module: sale
+#: model:ir.actions.act_window,name:sale.action_mass_cancel_orders
+msgid "Cancel quotations"
+msgstr "Zrušení návrhů smluv"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.mass_cancel_orders_view_form
+msgid ""
+"Some confirmed sale orders are selected. Their related documents might be\n"
+"                        affected by the cancellation."
+msgstr ""
+"Některé podepsané smlouvy jsou vybrány. Jejich souvisejícími doklady mohou být\n"
+"                        ovlivněny zrušením."
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.mass_cancel_orders_view_form
+msgid ""
+"selected\n"
+"                    quotations?"
+msgstr ""
+"vybrané\n"
+"                    smlouvy?"
+
+#. module: sale
+#: model:ir.actions.server,name:sale.model_sale_order_action_quotation_sent
+msgid "Mark Quotation as Sent"
+msgstr "Označit návrh smlouvy jako odeslaný"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.mass_cancel_orders_view_form
+msgid "Cancel quotations"
+msgstr "Zrušení smluv"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_sale_order__project_number
+msgid "Project Number"
+msgstr "Číslo projektu"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__agreement_id
+msgid "Agreements"
+msgstr "Rámcové smlouvy"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.agreement_form_inherit_origamis
+msgid "Amendments"
+msgstr "Dodatky"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_agreement__contract_amendment_ids
+msgid "Contract Amendments"
+msgstr "Dodatky smluv"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_agreement__state
+msgid "State"
+msgstr "Stav"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__agreement__state__draft
+msgid "Draft"
+msgstr "Návrh smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__agreement__state__sent
+msgid "Contract Sent"
+msgstr "Smlouva odeslána"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__agreement__state__signed
+msgid "Signed Contract"
+msgstr "Podepsaná smlouva"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields.selection,name:origamis_renards_sale.selection__agreement__state__cancel
+msgid "Cancel"
+msgstr "Zrušeno"
+
+#. module: origamis_renards_sale
+#. odoo-python
+#: code:addons/origamis_renards_sale/models/sale_order.py:0
+#, python-format
+msgid ""
+"An error occurred while confirming the contract proposal. To confirm the "
+"Contract Proposal, please fill in the Date of Signature field. "
+msgstr "Nastala chyba při potvrzení návrhu rámcové smlouvy. Pro potvrzení návrhu rámcové smlouvy vyplńte pole Datum podpisu."
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.agreement_form_inherit_origamis
+msgid "Confirm"
+msgstr "Potvrdit"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.agreement_form_inherit_origamis
+msgid "Send e-mail"
+msgstr "Odeslat e-mailem"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.agreement_form_inherit_origamis
+msgid "Cancel Contract"
+msgstr "Zrušit smlouvu"
+
+#. module: origamis_renards_sale
+#: model_terms:ir.ui.view,arch_db:origamis_renards_sale.agreement_form_inherit_origamis
+msgid "Return to Draft"
+msgstr "Vrátit do návrhu"
+
+#. module: origamis_renards_sale
+#: model:ir.model,name:origamis_renards_sale.model_agreement
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__agreement_id
+msgid "Agreement"
+msgstr "Rámcová smlouva"
+
+#. module: origamis_renards_sale
+#: model:ir.model,name:origamis_renards_sale.model_framework_contract_amendment
+msgid "Amendment to Framework Contracts"
+msgstr "Dodatek pro rámcové smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__contract_amendment_no
+msgid "Contract Amendment No"
+msgstr "Číslo dodatku smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__customer_id
+msgid "Customer"
+msgstr "Zákazník"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__description
+msgid "Description"
+msgstr "Popis"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__name
+msgid "Name"
+msgstr "Název dodatku smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_contract_number__upload_contract
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_framework_contract_amendment__upload_contract
+msgid "Upload Contract"
+msgstr "Nahrát dodatek smlouvy"
+
+#. module: origamis_renards_sale
+#: model:ir.actions.act_window,name:origamis_renards_sale.action_framework_contract_amendment
+#: model:ir.ui.menu,name:origamis_renards_sale.menu_framework_contract_amendment
+msgid "Contract Amendments"
+msgstr "Dodatky rámcových smluv"
+
+#. module: origamis_renards_sale
+#: model:ir.model.fields,field_description:origamis_renards_sale.field_agreement__contract_amendment_to_framework_agreement_ids
+msgid "Contract Amendments to Framework Agreements"
+msgstr "Dodatky smluv pro rámcové smlouvy"

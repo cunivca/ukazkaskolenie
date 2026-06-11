@@ -1,0 +1,275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* origamis_renards_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-24 21:06+0000\n"
+"PO-Revision-Date: 2024-09-24 21:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields.selection,name:origamis_renards_crm.selection__crm_lead__source_of_intent__dotace
+#: model:ir.model.fields.selection,name:origamis_renards_crm.selection__crm_lead__source_of_intent__renards
+msgid "CZ"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__colour
+msgid "Colour"
+msgstr "Barva"
+
+#. module: origamis_renards_crm
+#: model:ir.model,name:origamis_renards_crm.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurační nastavení"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__contact_person_id_domain
+msgid "Contact Person Id Domain"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__contact_person_id
+msgid "Contact person"
+msgstr "Kontaktní osoba"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__email_from
+msgid "Email"
+msgstr "Email "
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__id
+msgid "ID"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: origamis_renards_crm
+#: model:ir.model,name:origamis_renards_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Prospekt/příležitost"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_intent__name
+msgid "Name"
+msgstr "Druh záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__phone
+msgid "Phone"
+msgstr "Mobil"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_lead__phone
+#: model_terms:ir.ui.view,arch_db:crm.quick_create_opportunity_form
+msgid "Phone"
+msgstr "Mobil"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__project_budget
+msgid "Project Budget"
+msgstr "Rozpočet záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields.selection,name:origamis_renards_crm.selection__crm_lead__source_of_intent__ziskatel
+msgid "Recipient"
+msgstr "Získatel"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_res_config_settings__recipient_tag_id
+msgid "Recipient Tag"
+msgstr "Získatel štítek"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__source_of_intent
+msgid "Source of Intent"
+msgstr "Zdroj záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.model,name:origamis_renards_crm.model_type_of_intent
+msgid "Type Of Intent"
+msgstr "Druh záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.actions.act_window,name:origamis_renards_crm.action_type_of_intent_origamis
+#: model:ir.ui.menu,name:origamis_renards_crm.menu_type_of_intent_origamis
+msgid "Types Of Intent"
+msgstr "Druhy záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__type_of_intent_ids
+msgid "Types of Intent"
+msgstr "Druh záměru"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__user_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner__user_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass__user_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead__user_id
+#: model:ir.model.fields,field_description:crm.field_crm_merge_opportunity__user_id
+#: model_terms:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Salesperson"
+msgstr "Garant záměru"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__date_deadline
+#: model:ir.model.fields,field_description:crm.field_crm_lead__date_deadline
+#: model_terms:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_search_forecast
+#: model_terms:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Expected Closing"
+msgstr "Očekávaná realizace"
+
+#. module: origamis_renards_crm
+#: model_terms:ir.ui.view,arch_db:origamis_renards_crm.crm_lead_view_form_inherit_origamis
+msgid "Internal notes"
+msgstr "Popis záměru"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_calendar_event__opportunity_id
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__lead_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead__name
+#: model:ir.model.fields,field_description:crm.field_res_partner__opportunity_count
+#: model:ir.model.fields,field_description:crm.field_res_users__opportunity_count
+#: model:ir.model.fields.selection,name:crm.selection__crm_activity_report__lead_type__opportunity
+#: model:ir.model.fields.selection,name:crm.selection__crm_lead__type__opportunity
+#: model_terms:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.crm_case_tree_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm.crm_team_view_kanban_dashboard
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Opportunity"
+msgstr "Záměr"
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.crm_menu_sales
+msgid "Sales"
+msgstr "Záměr"
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.menu_crm_opportunities
+#: model_terms:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "My Pipeline"
+msgstr "Mé záměry"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__tag_ids
+#: model:ir.model.fields,field_description:crm.field_crm_lead__tag_ids
+msgid "Tags"
+msgstr "Dotační titul"
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.menu_crm_lead_categ
+msgid "Tags"
+msgstr "Dotační tituly"
+
+#. module: crm
+#. odoo-python
+#: code:addons/crm/models/crm_lead.py:0
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__partner_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner__partner_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass__partner_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead__partner_id
+#: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
+#, python-format
+msgid "Customer"
+msgstr "Klient"
+
+#. module: crm
+#: model_terms:ir.ui.view,arch_db:crm.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm.quick_create_opportunity_form
+msgid "e.g. Product Pricing"
+msgstr "Výstižný název záměru"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__partner_city
+msgid "Partner City"
+msgstr "Město"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__partner_region_id
+msgid "Region"
+msgstr "Kraj"
+
+#. module: origamis_renards_crm
+#: model_terms:ir.ui.view,arch_db:origamis_renards_crm.crm_lead_view_form_inherit_origamis
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"partner_id_address_name\">\n"
+"                        <b>Realisation Address</b>\n"
+"                    </span>"
+msgstr ""
+"<span class=\"o_form_label o_td_label\" name=\"partner_id_address_name\">\n"
+"                        <b>Místo realizace</b>\n"
+"                    </span>"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_type_of_service__name
+msgid "Name Of Service"
+msgstr "Název služby"
+
+#. module: origamis_renards_crm
+#: model:ir.model,name:origamis_renards_crm.model_type_of_service
+msgid "Type Of Service"
+msgstr "Druh služby"
+
+#. module: origamis_renards_crm
+#: model:ir.model.fields,field_description:origamis_renards_crm.field_crm_lead__type_of_service_id
+msgid "Type Of Service"
+msgstr "Druh služby"
+
+#. module: origamis_renards_crm
+#: model:ir.actions.act_window,name:origamis_renards_crm.action_type_of_service_origamis
+#: model:ir.ui.menu,name:origamis_renards_crm.menu_type_of_service_origamis
+msgid "Types Of Services"
+msgstr "Druhy služeb"
+
+#. module: origamis_renards_crm
+#: model_terms:ir.ui.view,arch_db:origamis_renards_crm.crm_lead_view_form_inherit_origamis
+msgid "Realisation Address"
+msgstr "Místo realizace"
+
+#. module: sale_crm
+#: model:ir.actions.act_window,name:sale_crm.crm_quotation_partner_action
+#: model_terms:ir.ui.view,arch_db:sale_crm.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:sale_crm.crm_quotation_partner_view_form
+msgid "New Quotation"
+msgstr "Nová smlouva"

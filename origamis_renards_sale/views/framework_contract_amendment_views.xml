@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Creating a tree view and menu item for framework.contract.amendment model -->
+        <record id="view_framework_contract_amendment_tree" model="ir.ui.view">
+            <field name="name">origamis.framework.contract.amendment.tree</field>
+            <field name="model">framework.contract.amendment</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="1" delete="1" multi_edit="1">
+                    <field name="agreement_id" required="True" optional="show"/>
+                    <field name="customer_id" required="True" optional="show"/>
+                    <field name="name" required="True" optional="show"/>
+                    <field name="contract_amendment_no" required="True" optional="show"/>
+                    <field name="description" optional="show"/>
+                    <field name="upload_contract" optional="show" widget="file"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_framework_contract_amendment" model="ir.actions.act_window">
+            <field name="res_model">framework.contract.amendment</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_framework_contract_amendment_tree"/>
+        </record>
+
+        <menuitem id="menu_framework_contract_amendment"
+                  name="Contract Amendments"
+                  parent="sale.sale_order_menu"
+                  action="action_framework_contract_amendment"
+                  sequence="26"
+        />
+    </data>
+</odoo>

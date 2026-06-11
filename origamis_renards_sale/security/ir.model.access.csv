@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_contract_number_admin,access.contract.number.admin,origamis_renards_sale.model_contract_number,sales_team.group_sale_manager,1,1,1,1
+access_contract_number_all_documents,access.contract.number.all.documents,origamis_renards_sale.model_contract_number,sales_team.group_sale_salesman_all_leads,1,1,1,1
+access_contract_number_own_documents,access.contract.number.own.documents,origamis_renards_sale.model_contract_number,sales_team.group_sale_salesman,1,1,1,1
+
+access_agreement_own_documents,access.agreement.own.documents,agreement.model_agreement,sales_team.group_sale_salesman,1,1,1,1
+
+access_framework_contract_amendment_own_documents,access.framework.contract.amendment.own.documents,origamis_renards_sale.model_framework_contract_amendment,sales_team.group_sale_salesman,1,1,1,1

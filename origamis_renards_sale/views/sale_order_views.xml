@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Adding new fields and tabs to the sale.order form view -->
+        <record id="view_order_form_inherit_origamis" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.origamis</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='partner_details']//field[@name='partner_id']" position="after">
+                    <field name="form_of_legal_execution"/>
+                </xpath>
+
+                <xpath expr="//page[@name='other_information']" position="after">
+                    <page string="Contracts" name="page_contracts">
+                        <field name="contract_number_ids" widget="section_and_note_one2many" mode="tree" nolabel="1">
+                            <tree editable="bottom" limit="200">
+                                <field name="sale_order_id" readonly="0" optional="show"/>
+                                <field name="customer_id" readonly="0" optional="show"/>
+                                <field name="name" required="True"/>
+                                <field name="framework_contract_no" required="True"/>
+                                <field name="description"/>
+                                <field name="upload_contract"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                    <page string="Individual Contacts" name="page_individual_contracts">
+                        <field name="partner_child_ids" invisible="1"/>
+                        <field name="individual_contact_ids" mode="tree" nolabel="1">
+                            <tree editable="bottom" limit="200">
+                                <field name="name"/>
+                                <field name="statutory_person" optional="show"/>
+                                <field name="email"/>
+                                <field name="mobile"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                
+                <xpath expr="//field[@name='payment_term_id']" position="before">
+                    <field name="sale_order_name_readonly" invisible="1"/>
+                    <field name="date_of_signature" readonly="state in ['sale', 'cancel']"/>
+                </xpath>
+
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="type_of_service_id" readonly="0"/>
+                </xpath>
+
+                <xpath expr="//sheet//div[hasclass('oe_title')]//field[@name='name']" position="attributes">
+                    <attribute name="readonly">sale_order_name_readonly</attribute>
+                </xpath>
+
+                <xpath expr="//group[@name='partner_details']//field[@name='partner_id']" position="before">
+                    <xpath expr="//field[@name='origin']" position="move"/>
+                    <field name="project_number"/>
+                </xpath> 
+
+                <!--hiding date_order field in the form view-->
+                <xpath expr="//group[@name='order_details']//div[hasclass('o_td_label')][1]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//group[@name='order_details']//field[@name='date_order'][1]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//group[@name='order_details']//div[hasclass('o_td_label')][2]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//group[@name='order_details']//field[@name='date_order'][2]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <!--hiding Delivery group and require_payment field-->
+                <xpath expr="//group[@name='sale_shipping']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//label[@for='require_payment']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//div[@id='require_payment']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <!-- adding hint to the client_order_ref field -->
+                <xpath expr="//field[@name='client_order_ref']" position="attributes">
+                    <attribute name="placeholder">Client-side contract number</attribute>
+                </xpath>
+
+                <!-- hiding preview button -->
+                <xpath expr="//button[@name='action_preview_sale_order']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Adding form_of_legal_execution field to the sale.order tree view -->
+        <record id="sale_order_tree_inherit_origamis" model="ir.ui.view">
+            <field name="name">sale.order.tree.inherit.origamis</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.sale_order_tree"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <!--rearranging the fields in the sale.order tree view-->
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="project_number" optional="show"/>
+                    <xpath expr="//field[@name='partner_id']" position="move"/>
+                </xpath>
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="type_of_service_id" optional="show"/>
+                    <field name="origin" optional="show"/>
+                    <field name="opportunity_id" optional="hide"/>
+                </xpath>
+
+                <xpath expr="//field[@name='opportunity_id']" position="after">
+                    <xpath expr="//field[@name='user_id']" position="move"/>
+                    <xpath expr="//field[@name='state']" position="move"/>
+                    <xpath expr="//field[@name='invoice_status']" position="move"/>
+                </xpath>
+
+                <xpath expr="//field[@name='invoice_status']" position="after">
+                    <field name="date_of_signature" optional="show"/>
+                </xpath>
+
+                <xpath expr="//field[@name='date_of_signature']" position="after">
+                    <field name="form_of_legal_execution" optional="hide"/>
+                </xpath>
+
+                <!--adjusting visibility of the fields in the sale.order tree view-->
+                <xpath expr="field[@name='user_id']" position="attributes">
+                    <attribute name="optional">show</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='state']" position="attributes">
+                    <attribute name="optional">show</attribute>
+                </xpath>
+                
+                <xpath expr="field[@name='invoice_status']" position="attributes">
+                    <attribute name="optional">show</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='commitment_date']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='expected_date']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='activity_ids']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='amount_total']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='team_id']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='company_id'][2]" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='amount_untaxed']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='amount_tax']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='tag_ids']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='amount_to_invoice']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='client_order_ref']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='validity_date']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="field[@name='date_order']" position="attributes">
+                    <attribute name="column_invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Making create_date and invoice_status field in the quotes tree view hidden/shown by default  -->
+        <record id="view_quotation_tree_inherit_origamis" model="ir.ui.view">
+            <field name="name">sale.order.tree (quotes).inherit.origamis</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='create_date']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='invoice_status']" position="attributes">
+                    <attribute name="optional">show</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Hiding optional products page in the sale.order form view -->
+        <record id="sale_order_form_quote_inherit_origamis" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.sale_management.inherit.origamis</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_management.sale_order_form_quote"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='optional_products']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Archiving menu items -->
+        <menuitem
+            id="sale.menu_sale_order"
+            active="0"/>
+
+        <menuitem
+            id="sale.res_partner_menu"
+            active="0"/>
+    </data>
+</odoo>

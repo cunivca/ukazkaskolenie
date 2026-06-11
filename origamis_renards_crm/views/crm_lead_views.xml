@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Adjusting crm.lead form view -->
+        <record id="crm_lead_view_form_inherit_origamis" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit.origamis</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form" />
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <!--changing the domain of partner_id field in form view-->
+                <xpath expr="//group[@name='lead_partner']//field[@name='partner_id']" position="attributes">
+                    <attribute name="domain">
+                        [('is_company', '=', True)]
+                    </attribute>
+                </xpath>
+
+                <xpath expr="//group[@name='opportunity_partner']//field[@name='partner_id']" position="attributes">
+                    <attribute name="domain">
+                        [('is_company', '=', True)]
+                    </attribute>
+                </xpath>
+
+                <!--adding new fields to form view-->
+                <xpath expr="//h1" position="after">
+                    <div class="o_row">
+                        <label for="partner_id"/>
+                    </div>
+                    <div class="o_row">
+                        <field name="contact_person_id_domain" invisible="1"/>
+                        <label for="contact_person_id"/>
+                        <field name="contact_person_id" domain="contact_person_id_domain"
+                                                        />
+                    </div>
+                </xpath>
+
+                <xpath expr="//label[@for='partner_id']" position="after">
+                    <xpath expr="//group[@name='opportunity_partner']//field[@name='partner_id']" position="move"/>    
+                </xpath>
+
+                <!--project_budget field-->
+                <xpath expr="//div[hasclass('col-auto')][2]" position="attributes">
+                    <attribute name="class" add="d-none" separator=" "/>
+                </xpath>
+
+                <xpath expr="//span[hasclass('oe_grey', 'p-2')][1]" position="replace">
+                    <span class="oe_grey p-2 text-nowrap"> </span>
+                </xpath>
+
+                <xpath expr="//span[hasclass('oe_grey', 'p-2')][2]" position="replace">
+                    <span class="oe_grey p-2 text-nowrap"> </span>
+                </xpath>
+                
+                <!--project_budget and expected_revenue fields-->
+                <xpath expr="//h2" position="attributes">
+                    <attribute name="class" separator=" " add="d-none"></attribute>      
+                </xpath>
+
+                <xpath expr="//field[@name='lost_reason_id']" position="after">
+                    <field name="project_budget" widget="monetary" options="{'currency_field': 'company_currency'}"/>        
+                    <field name="expected_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                    <field name="partner_region_id" readonly="0" string="Realisation Address"/>
+                </xpath>
+
+                <!--source_of_intent field-->
+                <xpath expr="//group[1]//group[4]//field[@name='user_id']" position="after">
+                    <field name="source_of_intent_domain" invisible="1"/>
+                    <field name="source_of_intent" readonly="0" domain="source_of_intent_domain"/>
+                </xpath>
+
+                <xpath expr="//group[1]//group[5]//field[@name='user_id']" position="after">
+                    <field name="source_of_intent" readonly="0"/>
+                </xpath>
+
+                <!--type_of_intent_ids field-->
+                <xpath expr="//group[1]//group[4]//field[@name='tag_ids']" position="before">
+                    <field name="type_of_intent_ids" widget="many2many_tags" options="{'color_field': 'colour'}"/>
+                </xpath>
+
+                <xpath expr="//group[1]//group[6]//field[@name='tag_ids']" position="before">
+                    <field name="type_of_intent_ids" widget="many2many_tags" options="{'color_field': 'colour'}"/>
+                </xpath>
+
+                <!--hiding fields in the form view-->
+                <xpath expr="//page[@name='lead']//group//group[1]//div//field[@name='street2']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='lead']//group//group[1]//field[@name='website']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='lead']//group//group[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='lead']//group//group[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!--renaming internal notes tab to force new translation-->
+                <xpath expr="//page[@name='internal_notes']" position="attributes">
+                    <attribute name="string">Internal notes</attribute>
+                </xpath>
+
+                <!--hiding email warning in the form view-->
+                <xpath expr="//span[hasclass('fa', 'fa-exclamation-triangle', 'text-warning', 'oe_edit_only')]" 
+                       position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!--moving the priority field-->
+                <xpath expr="//div[hasclass('o_lead_opportunity_form_inline_fields')]//field[@name='priority']" 
+                       position="attributes">
+                        <attribute name="nolabel">0</attribute>
+                </xpath>
+
+                <xpath expr="//div[hasclass('o_lead_opportunity_form_inline_fields')]" position="after">
+                    <xpath expr="//div[hasclass('o_lead_opportunity_form_inline_fields')]//field[@name='priority']" 
+                           position="move"/>
+                </xpath>
+
+                <!--type_of_service_id field-->
+                <xpath expr="//group[1]//group[4]//field[@name='type_of_intent_ids']" position="before">
+                    <field name="type_of_service_id"/>
+                </xpath>
+
+                <xpath expr="//group[1]//group[6]//field[@name='type_of_intent_ids']" position="before">
+                    <field name="type_of_service_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Adjusting crm.lead list view -->
+        <record id="crm_case_tree_view_oppor_inherit_origamis" model="ir.ui.view">
+            <field name="name">crm.lead.tree.opportunity.inherit.origamis</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <!--adjusting and adding fields in the list view-->
+                <xpath expr="//field[@name='partner_id']" position="replace">
+                    <field name="partner_id" optional="show" domain="[('is_company', '=', True)]"/>
+                    <field name="contact_person_id" optional="show"/>
+                </xpath>
+
+                <xpath expr="//field[@name='contact_name']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='expected_revenue']" position="after">
+                    <field name="project_budget" optional="show" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="source_of_intent" optional="hide"/>
+                </xpath>
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="type_of_intent_ids" optional="hide" widget="many2many_tags" options="{'color_field': 'colour'}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='probability']" position="attributes">
+                    <attribute name="column_invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='campaign_id']" position="attributes">
+                    <attribute name="column_invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='medium_id']" position="attributes">
+                    <attribute name="column_invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='source_id']" position="attributes">
+                    <attribute name="column_invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='contact_name']" position="attributes">
+                    <attribute name="column_invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Adjusting crm.lead kanban view -->
+        <record id="quick_create_opportunity_form_inherit_origamis" model="ir.ui.view">
+            <field name="name">crm.lead.form.quick_create.inherit.origamis</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <!--changing the domain of partner_id field in kanban view-->
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="domain">
+                        [('is_company', '=', True)]
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="crm_case_kanban_view_leads_inherit_origamis" model="ir.ui.view">
+            <field name="name">crm.lead.kanban.lead.inherit.origamis</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <!--removing expected_revenue field from kanban view-->
+                <xpath expr="//div[hasclass('o_kanban_record_subtitle')]" position="attributes">
+                    <attribute name="class" separator=" " add="d-none"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_kanban_content', 'flex-grow-1')]//div[3]" position="after">
+                    <div>
+                        <field name="type_of_intent_ids" widget="many2many_tags" options="{'color_field': 'colour'}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Making changes to the invoice tamplate - standard -->
+        <template id="external_layout_standard_inherit_origamis" inherit_id="web.external_layout_standard">
+            <!--adding second logo-->
+            <xpath expr="//div[hasclass('row')][1]//div[2]" position="replace">
+                <div class="col-9 text-end">
+                    <img t-if="company.logo_2" t-att-src="image_data_uri(company.logo_2)" style="max-height: 45px;"/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='row'][div[@name='company_address']]" position="replace">
+                <div class="row" style="margin-top:0.5em;">
+                    <!-- Company Address Block -->
+                    <div class="col-6" name="company_address">
+                        <ul class="list-unstyled" name="company_address_list">
+                            <li t-if="company.is_company_details_empty">
+                                <span t-field="company.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}">
+                                    <div class="bg-light border-1 rounded h-100 d-flex flex-column align-items-center justify-content-center p-4 w-100 opacity-75 text-muted text-center">
+                                        <strong>Company address block</strong>
+                                        <div>Contains the company address.</div>
+                                    </div>
+                                </span>
+                            </li>
+                            <li t-else="">
+                                <span t-field="company.company_details">
+                                    <div class="bg-light border-1 rounded h-100 d-flex flex-column align-items-center justify-content-center p-4 w-100 opacity-75 text-muted text-center">
+                                        <strong>Company details block</strong>
+                                        <div>Contains the company details.</div>
+                                    </div>
+                                </span>
+                            </li>
+                            <li t-if="company.company_registry and company.account_fiscal_country_id.code == 'CZ'" style="margin-top: -1rem">
+                                IČO: <span t-field="company.company_registry"/>
+                            </li>
+                            <li t-if="company.vat and company.account_fiscal_country_id.code == 'CZ'">
+                                <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
+                                <span t-esc="company.vat"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Address Block -->
+                    <div t-if="o and o.partner_id" class="col-6 text-end" name="customer_address">
+                        <ul class="list-unstyled" name="customer_address_list" style="line-height:1.5em">
+                            <li><t t-esc="o.partner_id.name"></t></li>
+                            <li><t t-esc="o.partner_id.street"></t></li>
+                            <li>
+                                <t t-esc="o.partner_id.zip"></t>
+                                <t t-esc="o.partner_id.city"></t>
+                            </li>
+                            <li t-if="o.partner_id.company_registry">IČO: <t t-esc="o.partner_id.company_registry"></t></li>
+                            <li t-if="o.partner_id.vat">DIČ: <t t-esc="o.partner_id.vat"></t></li>
+                        </ul>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="web_address_layout_override" inherit_id="web.address_layout">
+            <!-- Remove all original content -->
+            <xpath expr="." position="replace">
+                <t t-set="colclass" t-value="('col-sm-5' if report_type == 'html' else 'col-5') + ' ms-auto'"/>
+                <div class="oe_structure"/>
+            </xpath>
+        </template>
+        
+        <template id="report_invoice_document_inherit_origamis" inherit_id="account.report_invoice_document">
+            <!--removing fields-->
+            <xpath expr="//div[@id='informations']//div[7]" position="replace">
+            </xpath>
+
+            <xpath expr="//div[@name='due_date']" position="after">
+                <div t-attf-class="#{'col-auto col-3 mw-100' if report_type != 'html' else 'col'} mb-2" t-if="o.ref and o.company_id.country_code == 'CZ'" name="ref">
+                    <strong>Customer Reference:</strong>
+                    <p class="m-0" t-field="o.ref"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@name='origin']" position="replace">
+            </xpath>
+
+            <xpath expr="//div[@id='informations']//div[5]" position="replace">
+            </xpath>
+
+            <xpath expr="//div[@id='informations']" position="after">
+                <div id="informations_renards" class="mb-5">
+                    <div t-if="o.invoice_origin and o.date_of_signature and o.move_type == 'out_invoice'" name="row_1">
+                        <span>We invoice you based on the contract </span>
+                        <span t-field="o.invoice_origin"></span>
+                        <span> dated </span>
+                        <span t-field="o.date_of_signature"></span>
+                    </div>
+
+                    <div t-if="o.origin and o.move_type == 'out_invoice'" name="row_2">
+                        <strong>Project: </strong>
+                        <span t-field="o.origin"></span>
+                    </div>
+
+                    <div t-if="o.project_number and o.move_type == 'out_invoice'" name="row_3">
+                        <strong>Registration number: </strong>
+                        <span t-field="o.project_number"></span>
+                    </div>
+
+                    <div t-if="o.tag_ids_string and o.move_type == 'out_invoice'" name="row_4">
+                        <strong>Program: </strong>
+                        <span t-field="o.tag_ids_string"></span>
+                    </div>
+
+                    <div class="col-10" 
+                         t-if="o.additional_text and o.move_type == 'out_invoice'" name="row_5">
+                        <span t-field="o.additional_text"></span>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
+ 

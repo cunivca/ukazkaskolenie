@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Creating a tree view for type.of.intent model -->
+        <record id="view_type_of_intent_tree" model="ir.ui.view">
+            <field name="name">origamis.type.of.intent.tree</field>
+            <field name="model">type.of.intent</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="1" delete="1" multi_edit="1">
+                    <field name="name"/>
+                    <field name="colour" widget="color_picker"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_type_of_intent_origamis" model="ir.actions.act_window">
+            <field name="name">Types Of Intent</field>
+            <field name="res_model">type.of.intent</field>
+            <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_type_of_intent_tree"/>
+        </record>
+
+        <menuitem id="menu_type_of_intent_origamis"
+                  parent="crm.menu_crm_config_lead"
+                  sequence="2"
+                  action="action_type_of_intent_origamis"/>
+
+    </data>
+</odoo>

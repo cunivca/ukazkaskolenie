@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Adding state headers and new tab to the agreement form view -->
+        <record id="agreement_form_inherit_origamis" model="ir.ui.view">
+            <field name="name">agreement.form.inherit.origamis</field>
+            <field name="model">agreement</field>
+            <field name="inherit_id" ref="agreement.agreement_form"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Amendments" name="contract_amendments">
+                        <field name="contract_amendment_to_framework_agreement_ids" 
+                        widget="section_and_note_one2many" mode="tree" nolabel="1">
+                            <tree editable="bottom" limit="200">
+                                <field name="agreement_id" required="True" optional="show"/>
+                                <field name="customer_id" required="True" optional="show"/>
+                                <field name="name" required="True" optional="show"/>
+                                <field name="contract_amendment_no" required="True" optional="show"/>
+                                <field name="description" optional="show"/>
+                                <field name="upload_contract" optional="show" widget="file"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="action_agreement_send" id="send_email" string="Send e-mail" type="object" 
+                                invisible="1" class="btn-secondary"/>
+                        <button name="action_confirm" id="confirm" string="Confirm" type="object" 
+                                invisible="state not in ['draft', 'sent']" class="btn-primary"/>
+                        <button name="action_cancel" id="cancel" string="Cancel Contract" type="object" 
+                                invisible="state == 'cancel'" class="btn-secondary"/>
+                        <button name="action_draft" id="draft" string="Return to Draft" type="object" 
+                                invisible="state != 'cancel'" class="btn-secondary"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,signed,cancel"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Adding state field to the agreement tree view -->
+        <record id="agreement_tree_inherit_origamis" model="ir.ui.view">
+            <field name="name">agreement.tree.inherit.origamis</field>
+            <field name="model">agreement</field>
+            <field name="inherit_id" ref="agreement.agreement_tree"/>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='signature_date']" position="before">
+                    <field name="state" optional="show" widget="badge"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

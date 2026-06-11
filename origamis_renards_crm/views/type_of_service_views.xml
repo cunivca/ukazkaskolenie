@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Creating a tree view for type.of.service model -->
+        <record id="view_type_of_service_tree" model="ir.ui.view">
+            <field name="name">origamis.type.of.service.tree</field>
+            <field name="model">type.of.service</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="1" delete="1" multi_edit="1">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_type_of_service_origamis" model="ir.actions.act_window">
+            <field name="name">Types Of Services</field>
+            <field name="res_model">type.of.service</field>
+            <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_type_of_service_tree"/>
+        </record>
+
+        <menuitem id="menu_type_of_service_origamis"
+                  parent="crm.menu_crm_config_lead"
+                  sequence="7"
+                  action="action_type_of_service_origamis"/>
+
+    </data>
+</odoo>

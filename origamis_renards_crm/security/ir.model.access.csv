@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_type_of_intent_user,access.type.of.intent,origamis_renards_crm.model_type_of_intent,sales_team.group_sale_salesman,1,0,0,0
+access_type_of_intent_admin,access.type.of.intent,origamis_renards_crm.model_type_of_intent,sales_team.group_sale_manager,1,1,1,1
+
+access_type_of_service_user,access.type.of.service,origamis_renards_crm.model_type_of_service,sales_team.group_sale_salesman,1,0,0,0
+access_type_of_service_admin,access.type.of.service,origamis_renards_crm.model_type_of_service,sales_team.group_sale_manager,1,1,1,1

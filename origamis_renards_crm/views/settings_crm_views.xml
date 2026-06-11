@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Creating a new extension view to edit an already existing view -->
+        <record id="res_config_settings_view_form_inherit_origamis" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.crm.inherit.origamis</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="crm.res_config_settings_view_form" />
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//setting[@id='crm_lead']" position="after">
+                    <setting></setting>
+                    <setting id="recipient_tag">
+                        <field name="recipient_tag_id"/>
+                    </setting>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

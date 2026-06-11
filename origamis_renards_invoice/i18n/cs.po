@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* origamis_renards_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-14 19:50+0000\n"
+"PO-Revision-Date: 2025-01-14 19:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<span> dated </span>"
+msgstr "<span> ze dne </span>"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<strong>Project: </strong>"
+msgstr "<strong>Projekt: </strong>"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<span>We invoice you based on the contract </span>"
+msgstr "<span>Fakturujeme vám na základě smlouvy </span>"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<strong>Program: </strong>"
+msgstr "<strong>Program: </strong>"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<strong>Registration number: </strong>"
+msgstr "<strong>Registrační číslo: </strong>"
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_bank_statement_line__additional_text
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_move__additional_text
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_payment__additional_text
+msgid "Additional Text on the Invoice"
+msgstr "Doplňující text na fakturu"
+
+#. module: origamis_renards_invoice
+#: model:ir.model,name:origamis_renards_invoice.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model,name:origamis_renards_invoice.model_base_document_layout
+msgid "Company Document Layout"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_base_document_layout__logo_2
+msgid "Company Logo 2"
+msgstr "Logo společnosti 2"
+
+#. module: origamis_renards_invoice
+#. odoo-python
+#: code:addons/origamis_renards_invoice/models/res_company.py:0
+#, python-format
+msgid "Company registry"
+msgstr "IČO"
+
+#. module: origamis_renards_invoice
+#: model:ir.model,name:origamis_renards_invoice.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_bank_statement_line__date_of_signature
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_move__date_of_signature
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_payment__date_of_signature
+msgid "Date Of Signature"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model,name:origamis_renards_invoice.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_res_company__logo_2
+msgid "Logo 2"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_bank_statement_line__origin
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_move__origin
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_payment__origin
+msgid "Origin"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_bank_statement_line__project_number
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_move__project_number
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_payment__project_number
+msgid "Project Number"
+msgstr ""
+
+#. module: origamis_renards_invoice
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_bank_statement_line__tag_ids_string
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_move__tag_ids_string
+#: model:ir.model.fields,field_description:origamis_renards_invoice.field_account_payment__tag_ids_string
+msgid "Tag Ids String"
+msgstr ""
+
+#. modules: account, web
+#: model_terms:ir.ui.view,arch_db:account.bill_preview
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Vystavení faktury:</strong>"
+
+#. modules: account, web
+#: model_terms:ir.ui.view,arch_db:account.bill_preview
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>Splatnost faktury:</strong>"
+
+#. module: origamis_renards_invoice
+#: model_terms:ir.ui.view,arch_db:origamis_renards_invoice.report_invoice_document_inherit_origamis
+msgid "<strong>Customer Reference:</strong>"
+msgstr "<strong>Reference zákazníka:</strong>"
+
+#. modules: account, web
+#: model_terms:ir.ui.view,arch_db:account.bill_preview
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
+msgid "<span>Unit Price</span>"
+msgstr "<span>Jed. cena</span>"
+
+#. modules: account, web
+#: model_terms:ir.ui.view,arch_db:account.bill_preview
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
+msgid "<span>Taxes</span>"
+msgstr "<span>DPH</span>"
