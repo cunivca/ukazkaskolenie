@@ -3,7 +3,7 @@
     'name': 'Origamis: Renards Sale',
     'category': 'Contacts',
     'summary': 'THE MODULE INTRODUCES VARIOUS ADDITIONS AND CUSTOMISATIONS TO THE SALE APP',
-    'version': '17.0.0.0.11',
+    'version': '17.0.0.0.12',
     'website': 'https://origamis.cz',
     'author': 'Origamis',
     'depends': [
