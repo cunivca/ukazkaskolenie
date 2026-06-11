@@ -2,7 +2,7 @@
 {
     'name': 'Origamis: Renards Invoice',
     'summary': 'This module makes changes to the default invoice template.',
-    'version': '17.0.0.0.4',
+    'version': '17.0.0.0.5',
     'website': 'https://origamis.cz',
     'author': 'Origamis',
     'depends': [
